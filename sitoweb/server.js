@@ -29,9 +29,9 @@ app.get('/accedi.html', (req, res) => {
     res.sendFile("accedi.html", { root: './htdocs' });
 });
 
-app.get('/gestisciDatiForm.html', (req, res) => {
+app.get('/gestisciDatiForm', (req, res) => {
     console.log("Mi hai chiesto la pagina della form");
-    res.send("<html></body>Ciao " + req.body.name + "</body></html>",);
+    res.send("<html></body>Ciao " + req.query.name + "</body></html>",);
 });
 
 
